@@ -7,11 +7,8 @@ public class MoodAnalyser  {
         if(message.toLowerCase().contains("sad")){
             mood = "SAD";
         }
-        else if (message.toLowerCase().contains("sad")) {
-            mood = "HAPPY";
-        }
         else {
-            mood = "Enter another statement about mood";
+            mood = "HAPPY";
         }
         return mood;
     }
