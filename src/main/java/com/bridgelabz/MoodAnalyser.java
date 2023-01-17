@@ -8,20 +8,24 @@ public class MoodAnalyser  {
         this.message = message;
     }
 
-    public String analyseMood(String message) throws Exception{
+    public String analyseMood(String message) throws MoodAnalysisException{
         String mood = null;
         try{
             if(message.equals("")){
-                throw new Exception();
+                System.out.println("Mood statement should not be empty"); ;
+                throw new MoodAnalysisException(MoodAnalysisException.exc.EMPTY);
             }
-            else if (message.toLowerCase().contains("sad")) {
+            else if (message == null) {
+                System.out.println("Mood statement should not be empty");
+                throw new MoodAnalysisException(MoodAnalysisException.exc.NULL);
+            } else if (message.toLowerCase().contains("sad")) {
                 mood = "SAD";
             } else {
                 mood = "HAPPY";
             }
         }
         catch (Exception e){
-            mood = "HAPPY";
+            System.out.println(e.getMessage());
         }
         return mood;
     }
