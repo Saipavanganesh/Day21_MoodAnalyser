@@ -8,7 +8,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your statement");
         String message = sc.nextLine();
-        message = message.toLowerCase();
-        moodAnalyser.analyseMood(message);
+        System.out.println(moodAnalyser.analyseMood(message));
     }
 }
