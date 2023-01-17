@@ -8,13 +8,11 @@ public class MoodAnalyser  {
         this.message = message;
     }
 
-
-
     public String analyseMood(String message) throws Exception{
         String mood = null;
         try{
             if(message.equals("")){
-                throw new Exception("Entered statement is empty.");
+                throw new Exception();
             }
             else if (message.toLowerCase().contains("sad")) {
                 mood = "SAD";
@@ -23,7 +21,7 @@ public class MoodAnalyser  {
             }
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+            mood = "HAPPY";
         }
         return mood;
     }

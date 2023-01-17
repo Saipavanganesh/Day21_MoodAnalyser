@@ -10,6 +10,6 @@ class MoodAnalyserTest {
     public void testMood() throws Exception {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
         String currentMood =  moodAnalyser.analyseMood("");
-        Assertions.assertEquals("null" , currentMood);
+        Assertions.assertEquals("HAPPY" , currentMood);
     }
 }
