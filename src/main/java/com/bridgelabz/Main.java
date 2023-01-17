@@ -3,7 +3,7 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your statement");

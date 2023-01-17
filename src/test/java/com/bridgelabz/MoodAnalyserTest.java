@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MoodAnalyserTest {
     @Test
-    public void testMood(){
+    public void testMood() throws Exception {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String currentMood =  moodAnalyser.analyseMood("I am in any Mood");
-        Assertions.assertEquals("HAPPY" , currentMood);
+        String currentMood =  moodAnalyser.analyseMood("");
+        Assertions.assertEquals("null" , currentMood);
     }
 }
