@@ -7,17 +7,8 @@ public class MoodAnalyser  {
     public MoodAnalyser(String message) {
         this.message = message;
     }
-<<<<<<< HEAD
 
-    public String analyseMood(String message){
-        String mood;
-            if (message.toLowerCase().contains("sad")) {
-                mood = "SAD";
-            } else {
-                mood = "HAPPY";
-            }
 
-=======
 
     public String analyseMood(String message) throws Exception{
         String mood = null;
@@ -34,7 +25,6 @@ public class MoodAnalyser  {
         catch (Exception e){
             System.out.println(e.getMessage());
         }
->>>>>>> uc2_checkNull
         return mood;
     }
 }
