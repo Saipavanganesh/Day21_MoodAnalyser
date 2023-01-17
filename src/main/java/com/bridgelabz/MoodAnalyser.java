@@ -1,14 +1,27 @@
 package com.bridgelabz;
 
 public class MoodAnalyser  {
-    public String analyseMood(String message){
-        String mood;
+    String message;
+    public MoodAnalyser() {
+    }
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
 
-        if(message.toLowerCase().contains("sad")){
-            mood = "SAD";
+    public String analyseMood(String message) throws Exception{
+        String mood = null;
+        try{
+            if(message.equals("")){
+                throw new Exception("Entered statement is empty.");
+            }
+            else if (message.toLowerCase().contains("sad")) {
+                mood = "SAD";
+            } else {
+                mood = "HAPPY";
+            }
         }
-        else {
-            mood = "HAPPY";
+        catch (Exception e){
+            System.out.println(e.getMessage());
         }
         return mood;
     }
